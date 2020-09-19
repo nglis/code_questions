@@ -14,6 +14,8 @@ public class SuperStack {
         if (currentStackCount == 99) {
             currentStackId ++;
             currentStackCount = 0;
+
+            // If there is no stack at the current hashtable "index", create a new one
             if (tbl.get(currentStackId) == null)
                 tbl.put(currentStackId, new Stack());
 
