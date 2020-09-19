@@ -5,8 +5,8 @@ import java.util.Hashtable;
 public class SuperStack {
     int maxStackSize = 100;
 
-    int currentStackId = 0;
-    int currentStackCount = 0;
+    private int currentStackId = 0;
+    private int currentStackCount = 0;
 
     private Hashtable<Integer, Stack> tbl = new Hashtable<>();
 
