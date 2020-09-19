@@ -8,7 +8,7 @@ public class SuperStack {
     int currentStackId = 0;
     int currentStackCount = 0;
 
-    Hashtable<Integer, Stack> tbl = new Hashtable<>();
+    private Hashtable<Integer, Stack> tbl = new Hashtable<>();
 
     public void push(int data) {
         if (currentStackCount == 99) {
