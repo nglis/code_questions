@@ -28,6 +28,7 @@ public class SuperStack {
         int data = (Integer) tbl.get(currentStackId).pop();
         currentStackCount --;
 
+        // Checks if the current stack is empty, then goes to the previous stack
         if (currentStackCount == -1) {
             currentStackId --;
             currentStackCount = 0;
