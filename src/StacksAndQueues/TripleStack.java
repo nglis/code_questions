@@ -2,6 +2,8 @@ package StacksAndQueues;
 
 public class TripleStack {
 
+    // Store 3 different stack using a single array
+    // Stacks can be accessed using index positions 1, 2 and 3
     int stackSize = 100;
     int[] arr = new int[stackSize * 3];
     int[] stackTops = { -1, -1, -1 };
