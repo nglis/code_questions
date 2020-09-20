@@ -8,7 +8,7 @@ public class TowersOfHanoi {
 
         moveDisks(n-1, origin, buffer, destination);
         moveTop(origin, destination);
-        moveDisk(n-1, buffer, destination, origin);
+        moveDisks(n-1, buffer, destination, origin);
     }
 
 }
