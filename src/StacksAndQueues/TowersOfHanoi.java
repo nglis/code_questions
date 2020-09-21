@@ -2,7 +2,7 @@ package StacksAndQueues;
 
 public class TowersOfHanoi {
 
-    public void moveDisks(int n, Tower origin, Tower destination, Tower buffer) {
+    public void moveDisks(int n, TowersSol origin, TowersSol destination, TowersSol buffer) {
         if (n <= 0)
             return;
 
