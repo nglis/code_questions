@@ -1,5 +1,6 @@
 package StacksAndQueues;
 
+// Animal Shelter works in a FIFO manner
 public class AnimalShelter {
     Node head;
 
