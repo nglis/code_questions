@@ -20,7 +20,7 @@ public class ArrayToBST {
     }
 
     TreeNode createMinimalBST(int arr[]) {
-        createMinimalBST(arr, 0, arr.length -1);
+        return createMinimalBST(arr, 0, arr.length -1);
     }
 
 }
