@@ -6,6 +6,7 @@ import java.util.Queue;
 import javax.swing.tree.TreeNode;
 
 public class IsBST {
+    // Check if left node is lesser than root node and right node is greater than root node
     public boolean subTreeIsBST(Node root) {
         if (root.left != null && root.left.data > root.data)
             return false;
