@@ -7,7 +7,7 @@ import javax.swing.tree.TreeNode;
 
 public class IsBST {
 
-    // in-order travel method
+    // in-order traversal method
     public static int index = 0;
     public void checkBST(Node root, int[] array) {
         if (root == null)
