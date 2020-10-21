@@ -7,7 +7,7 @@ import javax.swing.tree.TreeNode;
 
 public class IsBST {
 
-    // Solution
+    // Solution with O(n) runtime
     boolean checkBST(TreeNode n, int min, int max) {
         if (n == null)
             return false;
