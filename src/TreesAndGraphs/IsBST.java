@@ -8,6 +8,19 @@ import javax.swing.tree.TreeNode;
 public class IsBST {
 
     // Solution
+    boolean checkBST(TreeNode n, int min, int max) {
+        if (n == null)
+            return false;
+
+        if (n.data <= min || n.data >= max)
+            return false;
+
+        if (!checkBST(n.left, min, n.data) ||
+                !checkBST(n.right, n.data, max))
+            return false;
+
+        return true;
+    }
 
     // Alternative solution: depth-first traversal method
     public static int index = 0;
