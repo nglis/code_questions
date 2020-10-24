@@ -5,7 +5,7 @@ import javax.swing.tree.TreeNode;
 public class Successor {
 
     // Solution
-    public TreeNode inOrderSucc(TreeNode n) {
+    public TreeNode inOrderSuccessor(TreeNode n) {
         if (n == null)
             return null;
 
@@ -24,7 +24,6 @@ public class Successor {
     }
 
     // Solution helper
-
     public TreeNode leftMostChild(TreeNode n) {
         if (n == null)
             return null;
