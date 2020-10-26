@@ -3,6 +3,7 @@ package TreesAndGraphs;
 import javax.swing.tree.TreeNode;
 
 public class CommonAncestor {
+    // Check  if node p exists in tree
     public boolean covers(TreeNode root, TreeNode p) {
         if (root == null) return false;
         if (root == p) return true;
