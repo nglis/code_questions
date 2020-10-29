@@ -29,7 +29,7 @@ public class TreeContainsSubtree {
         return existsEqualSubtree(r1.left, r2) || existsEqualSubtree(r1.right, r2);
     }
 
-    // Sol'n
+    // Solution - Uses null checks on node to find in tree
     boolean containsTree(Node t1, Node t2) {
         if (t2 == null)
             return true;
