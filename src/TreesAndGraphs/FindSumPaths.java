@@ -33,6 +33,7 @@ public class FindSumPaths {
             System.out.print(path[i]);
     }
 
+    // Get depth of a node in a tree
     public int depth(Node node) {
         if (node == null)
             return 0;
