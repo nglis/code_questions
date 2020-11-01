@@ -28,9 +28,10 @@ public class FindSumPaths {
         findSum(node, sum, path, level + 1);
     }
 
+    // Every time a path is found for a sum, print the values
     public void printPath(int[] path, int start, int end) {
         for (int i = start; i <= end; i++)
-            System.out.print(path[i]);
+            System.out.print(path[i] + " ");
     }
 
     // Get depth of a node in a tree
