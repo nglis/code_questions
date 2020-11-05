@@ -2,6 +2,8 @@ package BitManipulation;
 
 public class InsertBit {
 
+    // More efficient approach
+
     public int soln(int n, int m, int i, int j) {
         int ones = ~0;
 
