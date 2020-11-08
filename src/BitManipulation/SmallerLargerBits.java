@@ -36,6 +36,9 @@ public class SmallerLargerBits {
 
         n |= mask << (c0 - 1);
 
+        // Set 0 where the first 10 was to 1
+        //n |= (1 << p);
+
         n |= ~(1 << (c1 + 1)) << c0 - 1;
         return n;
     }
