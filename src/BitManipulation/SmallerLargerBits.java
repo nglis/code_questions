@@ -18,7 +18,7 @@ public class SmallerLargerBits {
         }
 
         // Count 0's before the rightmost 1 bit in the new c value
-        while ((c & 1) == 0) {
+        while ((c & 1) == 0 && c != 0) {
             c0++;
             c >>= 1;
         }
@@ -35,9 +35,6 @@ public class SmallerLargerBits {
         int mask = (1 << (c1 + 1)) - 1;
 
         n |= mask << (c0 - 1);
-
-        // Set 0 where the first 10 was to 1
-        //n |= (1 << p);
 
         n |= ~(1 << (c1 + 1)) << c0 - 1;
         return n;
