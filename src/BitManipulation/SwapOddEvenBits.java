@@ -2,6 +2,7 @@ package BitManipulation;
 
 public class SwapOddEvenBits {
 
+    // Swaps odd and even bits using 1010101010 bit patterns as masks then shifting
     public int solution (int n) {
         return (((n & (0xaaaaaaaa)) >> 1) | ((n & (0x55555555)) << 1));
     }
