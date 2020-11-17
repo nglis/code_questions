@@ -1,6 +1,8 @@
 package MathAndProbability;
 
-public class LineThroughSquares {
+public class InfiniteLineThroughSquares {
+
+    // Cut two squares on a 2D plan in half - Infinite line implementation
 
     class Line {
         int slope;
