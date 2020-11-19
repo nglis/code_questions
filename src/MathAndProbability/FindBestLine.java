@@ -35,9 +35,9 @@ public class FindBestLine {
         return count;
     }
 
-    int countEquivLines(HashMap<Double, ArrayList<line>> linesBySlope, Line line) {
-        double key = Line.floorToNearestEpsilon(line.slope);
-        double eps = Line.epsilon;
+    int countEquivalentLines(HashMap<Double, ArrayList<Line>> linesBySlope, Line line) {
+        double key = floorToNearestEpsilon(line.slope);
+        double eps = epsilon;
         int count = countEquivalentLines(linesBySlope.get(key), line) +
                 countEquivalentLines(linesBySlope.get(key - eps), line) +
                 countEquivalentLines(linesBySlope.get(key + eps), line);
@@ -47,7 +47,7 @@ public class FindBestLine {
 
     void insertLine(HashMap<Double, ArrayList<Line>> linesBySlope, Line line) {
         ArrayList<Line> lines = null;
-        double key = Line.floorToNearestEpsilon(line.slope);
+        double key = floorToNearestEpsilon(line.slope);
         if (!linesBySlope.containsKey(key)) {
             lines = new ArrayList<Line>();
             linesBySlope.put(key, lines);
@@ -57,6 +57,11 @@ public class FindBestLine {
     }
 
     public static double epsilon = .0001;
+
+    public static double floorToNearestEpsilon(double d) {
+        int r = (int) (d / epsilon);
+        return ((double) r) * epsilon;
+    }
 
     public class Line {
         public double slope, intercept;
@@ -71,20 +76,15 @@ public class FindBestLine {
                 intercept = p.x;
             }
         }
-    }
 
-    public static double floorToNearestEpsilon(double d) {
-        int r = (int) (d / epsilon);
-        return ((double) r) * epsilon;
-    }
+        public boolean isEquivalent(double a, double b) {
+            return (Math.abs(a - b) < epsilon);
+        }
 
-    public boolean isEquivalent(double a, double b) {
-        return (Math.abs(a - b) < epsilon);
-    }
-
-    public boolean isEquivalent(Object o) {
-        Line l = (Line) o;
-        return isEquivalent(l.slope, slope) &&
-                (infinite_slope == l.infinite_slope);
+        public boolean isEquivalent(Object o) {
+            Line l = (Line) o;
+            return isEquivalent(l.slope, slope) &&
+                    (infinite_slope == l.infinite_slope);
+        }
     }
 }
