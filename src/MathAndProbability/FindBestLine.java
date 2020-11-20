@@ -3,6 +3,8 @@ package MathAndProbability;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+// On a 2d graph, find the line that connects the most points
+
 public class FindBestLine {
     Line findBestLine(GraphPoint[] points) {
         Line bestLine = null;
