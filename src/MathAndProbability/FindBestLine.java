@@ -22,7 +22,6 @@ public class FindBestLine {
                 }
             }
         }
-
         return bestLine;
     }
 
