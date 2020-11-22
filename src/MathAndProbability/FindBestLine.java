@@ -57,6 +57,7 @@ public class FindBestLine {
         }
     }
 
+    // Use epsilon as an alternative for checking value equivalency
     public static double epsilon = .0001;
 
     public static double floorToNearestEpsilon(double d) {
