@@ -7,6 +7,8 @@ public class OperationsWithAddition {
         return a + negate(b);
     }
 
+
+    // Get a number as a negative
     public static int negate(int a) {
         int neg = 0;
         int d = a < 0 ? 1 : -1;
