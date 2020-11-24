@@ -3,6 +3,7 @@ package MathAndProbability;
 public class OperationsWithAddition {
     // Implement subtraction, division and multiplication using addition operator
 
+    // Subtract b from a
     public static int subtract (int a, int b) {
         return a + negate(b);
     }
