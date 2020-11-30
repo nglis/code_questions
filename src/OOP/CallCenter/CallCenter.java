@@ -13,7 +13,26 @@ public class CallCenter <T extends Employee> {
         directors = d;
     }
 
-    public void dispatchCall() {
-        // TODO implement dispatch call
+    public void dispatchCall(Object call) {
+        T receiver = null;
+
+        if (getAvailableReceiver(respondents) != null)
+            receiver = getAvailableReceiver(respondents);
+        else if (getAvailableReceiver(managers) != null)
+            receiver = getAvailableReceiver(managers);
+        else
+            receiver = getAvailableReceiver(directors);
+
+        if (receiver != null)
+            receiver.receiveCall(call);
+
+    }
+
+    private T getAvailableReceiver(ArrayList<T> receivers) {
+        for (T r : receivers)
+            if (!r.isBusy())
+                return r;
+
+        return null;
     }
 }

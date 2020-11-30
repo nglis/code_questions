@@ -10,4 +10,8 @@ public abstract class Employee {
     public void setBusy(boolean b) { busy = b; }
     public boolean isBusy() { return busy; }
 
+    public void receiveCall(Object c) {
+        setBusy(true);
+    }
+
 }
