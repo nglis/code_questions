@@ -16,12 +16,13 @@ public class CallCenter <T extends Employee> {
     public void dispatchCall(Object call) {
         T receiver = null;
 
-        if (getAvailableReceiver(respondents) != null)
-            receiver = getAvailableReceiver(respondents);
-        else if (getAvailableReceiver(managers) != null)
-            receiver = getAvailableReceiver(managers);
-        else
-            receiver = getAvailableReceiver(directors);
+        while (receiver == null) {
+                receiver = getAvailableReceiver(respondents);
+            if (receiver == null)
+                receiver = getAvailableReceiver(managers);
+            if (receiver == null)
+                receiver = getAvailableReceiver(directors);
+        }
 
         if (receiver != null)
             receiver.receiveCall(call);
