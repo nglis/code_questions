@@ -13,7 +13,7 @@ public class CallHandler {
 
     List<List<Call>> callQueues;
 
-    protected CallHandler {
+    protected CallHandler() {
         // implement callHandler
     }
 
