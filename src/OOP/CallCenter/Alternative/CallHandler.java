@@ -43,9 +43,9 @@ public class CallHandler {
             call.reply("Please wait for an employee to reply");
             callQueues.get(call.getRank().getValue()).add(call);
         }
+    }
 
-        public boolean assignCall(Employee emp) {
-            // implement assignCall
-        }
+    public void assignCall(Employee emp) {
+        // implement assignCall
     }
 }
