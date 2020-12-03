@@ -45,7 +45,7 @@ public class CallHandler {
         }
     }
 
-    public void assignCall(Employee emp) {
+    public boolean assignCall(Employee emp) {
         // implement assignCall
     }
 }
