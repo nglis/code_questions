@@ -10,7 +10,7 @@ public class Book {
     }
 
     public int getID() {
-        return bookid;
+        return bookId;
     }
 
     public void setID(int id) {
