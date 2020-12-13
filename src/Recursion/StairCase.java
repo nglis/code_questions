@@ -2,7 +2,7 @@ package Recursion;
 
 public class StairCase {
 
-    // attempt
+    // attempt - possible number of combinations to climb n stairs (1, 2, 3 steps)
     private int n;
     private int combinations;
 
