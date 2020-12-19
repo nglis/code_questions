@@ -6,7 +6,7 @@ import java.util.Set;
 
 public class ParenthesesPerms {
 
-    // Get all possible close parentheses for n parentheses pairs (i.e. ())
+    // Get all possible perfect parentheses combinations for n parentheses pairs (i.e. ())
 
     public void addParen(ArrayList<String> list, int leftRem, int rightRem, char[] str, int count) {
         if (leftRem < 0 || rightRem < leftRem) return;
