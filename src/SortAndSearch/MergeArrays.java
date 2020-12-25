@@ -1,4 +1,4 @@
-package Sorting;
+package SortAndSearch;
 
 public class MergeArrays {
     // Merge array B into A in sorted order
