@@ -4,7 +4,7 @@ public class MergeSort {
 
     void mergeSort(int[] array) {
         int[] helper = new int[array.length];
-        mergeSort(array, helper, 0, arry.length - 1);
+        mergeSort(array, helper, 0, array.length - 1);
     }
 
     void mergeSort(int[] array,  int[] helper, int low, int high) {
@@ -28,6 +28,7 @@ public class MergeSort {
         while (helperLeft <= middle && helperRight <= high) {
             if (helper[helperLeft] <= helper[helperRight]) {
                 array[current] = helper[helperLeft];
+                helperLeft++;
             } else {
                 array[current] = helper[helperRight];
                 helperRight++;
