@@ -2,7 +2,7 @@ package SortAndSearch;
 
 public class TreeLookup {
 
-    // Read stream of integers into a ds. Implement track and getRankOfNumber
+    // Read stream of integers into a suitable data structure - Implement track and getRankOfNumber
 
     public static RankNode root = null;
 
