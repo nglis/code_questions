@@ -2,7 +2,6 @@ package SortAndSearch;
 
 public class FindElementInMatrix {
     // Find element in a M x N matrix
-
     public boolean search(int[][] matrix, int elem) {
         int row = 0;
         int col = matrix[0].length;
